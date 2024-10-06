@@ -54,8 +54,8 @@ header {
 }
 
 .List {
-    list-style: none;
     position: absolute;
+    list-style: none;
     top: 50px;
     right: 15px;
     justify-content: space-between;
@@ -68,7 +68,8 @@ header {
 
 .icon:hover + .List,
 .List:hover {
-    display: flex !important;
+    display: block !important;
+    z-index: 3;
 }
 
 .icon:hover .fa-caret-up,
@@ -99,13 +100,14 @@ header {
 .landing {
     background-image: url(../images/land.jpg);
     width: 100%;
-    height: 600px;
+    height: 90vb;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: top;
     padding: 0;
     margin: 0;
     padding-top: 10px;
+    scale: 1;
 }
 
 .intro-text {
@@ -120,8 +122,9 @@ header {
 }
 
 .intro-text h1 {
-    color: #07a1ac;
+    color: var(--main-color);
     font-size: 50px;
+    text-shadow: black 1px 1px 10px  !important;
 }
 
 .intro-text p {
@@ -131,6 +134,8 @@ header {
     max-width: 500px;
     margin: 0 auto;
     padding: 0 10px;
+    color: white !important;
+    text-shadow: black 1px 1px 10px  !important;
 }
 
 /* Features */
@@ -212,11 +217,21 @@ header {
 }
 
 .ser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    scale: 1;
+    font-size: 1rem;
 
 }
 
 .ser i {
-    font-size: 20px;
+    font-size: 2rem;
+    color: var(--main-color);
 }
 
 .img {
@@ -393,14 +408,24 @@ header {
 
 /* Contact */
 .Maail .text {
-    font-size: 80px;
+    font-size: 1rem;
     text-align: center;
-    line-height: 0px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .Maail h2 {
     margin-top: 50px;
-    padding: 60px;
     font-size: 50px;
     color: #07a1ac;
     text-align: center;
@@ -425,9 +450,8 @@ header {
     padding: 10px;
     border-radius: 10px;
     height: 300px;
-    overflow: hidden;
-    margin: 20px;
-    padding: 20px;
+    height: fit-content;
+
 }
 
 .social i {
@@ -470,5 +494,74 @@ header {
         align-items: center;
         margin-left: 0;
         margin-right: 0;
+    }
+    .sList{
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .shape{
+        display: none;
+    }
+    .about .text{
+        width: 100% !important;
+        font-size: .5rem !important;
+        line-height: 1 !important;
+        text-align: center;
+        font-weight: 400 !important;
+    }
+    p{
+        color: black !important;
+    }
+    .project p{
+        font-size: .8rem !important;
+        width: 100%;
+    }
+    .projects{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .projects .imgp{
+        width: 200px !important;
+        height: 300px !important;
+        margin: 0 !important;
+        
+    }
+    *{
+        font-size: 1.5rem;
+    }
+    .Maail .text{
+        font-size: 1rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .Maail h2{
+        font-size: 2rem !important;
+        text-wrap: wrap !important;
+        margin-top: 0 !important;
+        padding: 0;
+        display: block;
+    }
+    .social p{
+        margin: 0 !important;
+        font-size: 1rem ;
+    }
+    .social{
+        height: fit-content;
+
+    }
+    .fa-duotone.fa-solid.fa-bars{
+        font-size: 1rem !important;
+        top: 10px;
+    }
+    .icon{
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.5rem !important;
+    }
+    ul li a{
+        padding: 0;
+        font-size: 1rem;
     }
 }
